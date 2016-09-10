@@ -10,18 +10,17 @@
 # Move the red dot along the row, and down each column.
 #
 
+WIDTH = 8
+HEIGHT = 4
 
 import ledhat
 
-i = 0
 
-def draw(hat):
-    global i
+def draw(hat, frame):
     hat.clear_pixels()
-    row = (i//5)%5
-    col = i%5
-    hat.set_pixel(row, col, (255, 0, 0))
-    i += 1
+    y = (frame // WIDTH) % HEIGHT
+    x = frame % WIDTH
+    hat.set_pixel(x, y, (255, 0, 0))
 
 
-hat = ledhat.LEDHat(draw)
+hat = ledhat.LEDHat(draw, WIDTH, HEIGHT)
