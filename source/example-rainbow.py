@@ -33,4 +33,4 @@ def draw(hat, frame):
             n = (x + y + frame) // 2 % 8
             hat.set_pixel(x, y, rainbow[n])
 
-hat = ledhat.LEDHat(draw, WIDTH, HEIGHT, led_size=30)
+ledhat.LEDHat(draw, WIDTH, HEIGHT, led_size=30)
