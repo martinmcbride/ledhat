@@ -10,10 +10,10 @@
 # Move the red dot along the row, and down each column.
 #
 
+import ledhat
+
 WIDTH = 16
 HEIGHT = 16
-
-import ledhat
 
 rainbow = (
     (255, 0, 0),
